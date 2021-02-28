@@ -1,0 +1,15 @@
+horizontal snap : https://codepen.io/GreenSock/pen/YzygYvM
+get css values: https://zellwk.com/blog/css-translate-values-in-javascript/
+horizontal scroll: https://codepen.io/GreenSock/pen/YzygYvM
+ES6 import/export: https://en.it1352.com/article/3342df63dd6a4e58b618a116ce915d86.html
+3D navbar: https://www.youtube.com/watch?v=tORLvskwc4E
+Particles: https://www.section.io/engineering-education/javascript-particles-effect-with-tsparticles/
+Signup: https://bootsnipp.com/snippets/92gmX
+Area sropdown: https://www.geodata.solutions/?chronoform=listbuilder&event=submit
+Select2: https://select2.org/selections
+Validator: https://parsleyjs.org/
+Email-verify: https://www.npmjs.com/package/email-verify
+cookies: https://www.sitepoint.com/eat-those-cookies-with-jquery/
+Smooth Scrolling: https://www.cssscript.com/smooth-scroll-inertia-support-scrooth/
+invoice generator: https://www.npmjs.com/package/easyinvoice
+invoice generator: https://github.com/sitowebveloce/nodejs-invoice-pdf-generator/blob/master/app.js

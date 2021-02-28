@@ -1,0 +1,27 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "nodemon -e html,css,js app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "awesome-phonenumber": "^2.48.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "easyinvoice": "^1.0.111",
+    "email-verify": "^0.2.1",
+    "india-pincode-lookup": "^1.0.3",
+    "mongoose": "^5.11.17",
+    "nodemailer": "^6.5.0",
+    "reload": "^3.1.1",
+    "textbelt": "^0.0.4",
+    "three": "^0.121.1",
+    "twilio": "^3.58.0"
+  }
+}

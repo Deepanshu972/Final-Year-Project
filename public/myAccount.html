@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psycle | My Account</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="icon" href="/assets/favicon.svg">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <style>
+        .select2-results__option--selectable {
+            background: #151515;
+            color: white;
+        }
+
+        .select2-search--dropdown {
+            background: #151515;
+        }
+
+        .select2-container--default .select2-search--dropdown .select2-search__field {
+            background: #333333;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #ffffff !important;
+        }
+
+        .select2-results__options {
+            background: #151515;
+            color: white;
+        }
+
+        .addr-label input {
+            color: white;
+        }
+
+        .register-show input[type="text"],
+        .register-show input[type="password"],
+        .register-show input[type="email"] {
+            color: white;
+        }
+
+        .select2-search__field{
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body style="height: 100%; background: #151515;">
+
+    <div class="intruder">
+        <h1>Error 404 ⚠</h1>
+        <p>Page not found :(</p>
+        <div id="chain-reaction-intruder" style="z-index: -1;"></div>
+    </div>
+
+    <div class="remove-confirmation">
+        <div>Remove Item<p>Are you sure you want to remove this item?</p>
+            <button>CANCEL</button>
+            <button style="right: -68px; color: white; background: orangered;">REMOVE</button>
+        </div>
+    </div>
+
+    <div class="order-confirmation">
+        <div>Confirm Order<p>Check your shipping address in the 'My Profile' tab before placing your order.</p>
+            <button style="bottom: -40px;">CANCEL</button>
+            <button style="right: -68px; color: white; background: orangered; bottom: -40px; padding: 15px 48px;">CONFIRM</button>
+        </div>
+    </div>
+
+    <div class="order-cancellation">
+        <div>Cancel Order<p>Are you sure you want to cancel this order?</p>
+            <button style="bottom: -40px;">CANCEL</button>
+            <button style="right: -68px; color: white; background: orangered; bottom: -40px; padding: 15px 48px;">CONFIRM</button>
+        </div>
+    </div>
+
+    <div id="chain-reaction" style="z-index: -1;"></div>
+    <div class="loading-screen">
+        <video width="300" height="300" muted="" preload="" autoplay loop>
+            <source src="/assets/logovid.webm" type="video/webm">
+        </video>
+    </div>
+
+    <nav class="myacc-nav">
+        <h3 class="logo">
+            <a href="index.html">
+                <div class="animation"
+                    style="width: 285px; display: flex; justify-content: end; position: relative; left: -70px;">
+                    <video width="50" height="50" muted="" preload="">
+                        <source src="/assets/logovid.webm" type="video/webm">
+                    </video><span style="width: 231px;">PSYCLE</span>
+                </div>
+            </a>
+        </h3>
+        <div>
+            <div>My Profile<div class="ma-nav-icon"></div>
+            </div>
+            <div>Cart<div class="ma-nav-icon"></div>
+            </div>
+            <div>Orders<div class="ma-nav-icon"></div>
+            </div>
+            <div>Log Out<div class="ma-nav-icon"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="all-tabs">
+        <div class="myprofile">
+            <div class="ma-profile">
+                <div class="register-show" style="display: contents;">
+                    <h2 style="font-family: gilroy; cursor: context-menu; color: #bbbbbb;
+                    font-weight: initial;">UPDATE PROFILE</h2>
+                    <form id="register" name="register" method="dialog">
+                        <input type="text" placeholder="Full Name" required id="rgname" onkeyup="lettersOnly(this)">
+                        <input type="password" name="name" placeholder="Password" minlength="4" id="rgpasswd"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,10}"
+                            title="Password must have atleast 4 characters and contain at least one  number and one uppercase and lowercase letter">
+                        <input type="password" placeholder="Confirm Password" minlength="4" id="rgcpasswd"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,10}"
+                            title="Password must have atleast 4 characters and contain at least one  number and one uppercase and lowercase letter">
+                        <input type="submit" value="update" id="user-update">
+                        <div style="top: 420px; color: orange;">
+                            <label for="email">*Email ID does not exist.</label>
+                            <label for="password">*Password and Confirm Password field do not match.</label>
+                            <label for="email">*An account already exists with this email ID.</label>
+                        </div>
+                    </form>
+                    <div class="circ-loader-register" title="2" style="top: 360px;">
+                        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
+                            viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                            <path fill="#000"
+                                d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+                                style="fill: orange;">
+                                <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+                                    from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite" />
+                            </path>
+                            <defs>
+                                <linearGradient id="MyGradient">
+                                    <stop offset="5%" stop-color="#1474A4" />
+                                    <stop offset="95%" stop-color="#1474A4" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="ma-address">
+                <h2 style="font-family: gilroy; cursor: context-menu; color: #bbbbbb;
+                    font-weight: initial; position: absolute; left: 92px; top: 20px;">UPDATE ADDRESS</h2>
+                <form method="dialog" style="position: relative; top: 40px;">
+                    <div class="circ-loader-addr" title="2" style="bottom: -9.5vh; left: 25vw;">
+                        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
+                            viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                            <path fill="#000"
+                                d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+                                style="fill: orange;">
+                                <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+                                    from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite" />
+                            </path>
+                            <defs>
+                                <linearGradient id="MyGradient">
+                                    <stop offset="5%" stop-color="#1474A4" />
+                                    <stop offset="95%" stop-color="#1474A4" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <li class="addr-fields-li">
+                        <ul class="add-fields-ul">
+                            <label class="addr-label">
+                                <input name="name" id="addrname" type="text" onkeyup="lettersOnly(this)"
+                                    oninvalid="nameinval()" required />
+                                <div class="label-text" id="name-label">Full Name<span style="color: orangered">*</span>
+                                </div>
+                            </label>
+                            <label class="addr-label">
+                                <input type="text" pattern="^[0-9]{10}$" title="Invalid Mobile Number" minlength="10"
+                                    maxlength="10" name="phone" id="addrphone" oninvalid="phinval()"
+                                    onkeyup="numbersOnly(this)" required />
+                                <div class="label-text" id="ph-label">Phone Number<span
+                                        style="color: orangered">*</span></div>
+                            </label>
+                        </ul>
+
+                        <ul class="add-fields-ul">
+                            <label class="addr-label">
+                                <input type="hidden" name="country" id="countryId" value="IN" />
+                                <div class="state-n-city">
+                                    <select name="state" class="states order-alpha" id="stateId"
+                                        oninvalid="stateinval()" required>
+                                       <!--  <option value="" style="color: #4A4A4A;" id="state-label"
+                                            style="color: orangered;">Select State</option> -->
+                                    </select>
+                            </label>
+                            <label class="addr-label" style="padding: 0; position: relative; left: 32%;">
+                                <select name="city" class="cities order-alpha" id="cityId" oninvalid="cityinval()"
+                                    required>
+                                    <!-- <option value="" style="color: #4A4A4A;" id="city-label">Select City</option> -->
+                                </select>
+                            </label>
+                        </ul>
+
+                        <ul class="add-fields-ul">
+                            <label class="addr-label">
+                                <input type="loc" name="locality" id="addrlocality" oninvalid="localinval()" required />
+                                <div class="label-text" id="local-label">Locality<span style="color: orangered">*</span>
+                                </div>
+                            </label>
+                            <label class="addr-label">
+                                <input type="pin" pattern="^[0-9]{6}$" title="Invalid Zip Code" minlength="6"
+                                    maxlength="6" name="pincode" id="addrpincode" oninvalid="pininval()"
+                                    onkeyup="numbersOnly(this)" required />
+                                <div class="label-text" id="pin-label">Pincode<span style="color: orangered">*</span>
+                                </div>
+                            </label>
+                        </ul>
+
+                        <ul class="add-fields-ul">
+                            <label class="addr-label">
+                                <input rows="5" type="add" name="address" style="width: 38.5vw;" id="addraddress"
+                                    oninvalid="addressinval()" required />
+                                <div class="label-text" id="addr-label">Address<span style="color: orangered">*</span>
+                                </div>
+                            </label>
+                        </ul>
+
+                        <ul class="add-fields-ul">
+                            <label class="addr-label">
+                                <input type="lmark" name="landmark" id="addrlandmark" />
+                                <div class="label-text" id="landmark-label">Landmark</div>
+                            </label>
+                            <label class="addr-label">
+                                <input type="alt_no" name="addralternate_no" pattern="^[0-9]{10}$"
+                                    title="Invalid Mobile Number" minlength="10" maxlength="10"
+                                    onkeyup="numbersOnly(this)" id="addraltphone" />
+                                <div class="label-text" id="altph-label">Alternate Number</div>
+                            </label>
+                        </ul>
+                    </li>
+                    <input type="submit" value="update" id="addr-update">
+
+                    <div class="addr-validations" style="bottom: -85px; left: 8vw;">
+                        <label for="pincode">*Invalid Pin Code.</label>
+                        <label for="pincode">*Invalid Mobile Number.</label>
+                        <label for="pincode" id="pincode-val">*Invalid Alternate Mobile Number.</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-items">
+<!--                 <div class="cart-item">
+                    <div class="product-img"></div>
+                    <div class="orders-content">
+                    </div>
+                </div> -->
+            </div>
+
+            <table class="bill-table forcart" style="background: white; width: 35%; border-radius: 25px; padding: 3%; 
+            padding-top: 70px; box-shadow: 0 0 25px 6px #00000075; margin: 25px;">
+                <tr>
+                    <th>Parts</th>
+                    <th>
+                        <div style="position: absolute; top: 3vh; font-size: 24px; font-weight: initial">SUMMARY</div>
+                        Model Name
+                    </th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Frame Color</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Handlebar</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Seat</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Cable</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mudguard</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Fork</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Gear</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tyre</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="font-weight: bold; color: orangered;">Total</td>
+                    <td style="font-weight: bold; color: #585858;"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="orders">
+
+            <div class="order-items">
+<!--                 <div class="order-item">
+                    <div class="product-img"></div>
+                    <div class="orders-content">
+                <ul>
+                    <li class="product-title">CUSTOM PSYCLE<p>(Metal Finish)</p></li>
+                    <li class="order-id">Order ID :<p> 73gd73y73738</p></li>
+                    <li class="order-date">Ordered On :<p> 73gd73y73738</p></li>
+                    <li class="status">Delivery Status :<p> Delivered✔️</p></li>
+                </ul>
+                <div class="total">Total :<p> ₹xxxxxx</p></div>
+                </div>
+                    <div class="download-btn"></div>
+                </div> -->
+            </div>
+
+
+            <table class="bill-table fororders" style="background: white; width: 35%; border-radius: 25px; padding: 3%; 
+            padding-top: 70px; box-shadow: 0 0 25px 6px #00000075; margin: 25px;">
+                <tr>
+                    <th>Parts</th>
+                    <th>
+                        <div style="position: absolute; top: 3vh; font-size: 24px; font-weight: initial">SUMMARY</div>
+                        Model Name
+                    </th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Frame Color</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Handlebar</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Seat</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Cable</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mudguard</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Fork</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Gear</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tyre</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="font-weight: bold; color: orangered;">Total</td>
+                    <td style="font-weight: bold; color: #585858;"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/easyinvoice/dist/easyinvoice.min.js"></script>
+    <script src="/javascript/scrooth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.5/tsparticles.min.js"> </script>
+    <script src="//geodata.solutions/includes/statecity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="/javascript/myaccount.js"></script>
+</body>
+
+</html>

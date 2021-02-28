@@ -1,0 +1,86 @@
+Date : 2021-04-20 09:34:28
+Directory : c:\Users\Alex Francis\Desktop\myproject
+Total : 53 files,  27934 codes, 376 comments, 1311 blanks, all 29621 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          2 |     18,015 |          0 |          2 |     18,017 |
+| JavaScript |         17 |      5,355 |        240 |        743 |      6,338 |
+| HTML       |          8 |      2,415 |         79 |        248 |      2,742 |
+| CSS        |          1 |      2,042 |         53 |        313 |      2,408 |
+| XML        |         25 |        107 |          4 |          5 |        116 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                           | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                              |         53 |     27,934 |        376 |      1,311 |     29,621 |
+| public                                                                         |         50 |      9,171 |        310 |      1,191 |     10,672 |
+| public\Assets                                                                  |         25 |        107 |          4 |          5 |        116 |
+| public\Assets\Stickers                                                         |          2 |          2 |          0 |          0 |          2 |
+| public\Javascript                                                              |          9 |      4,305 |        172 |        611 |      5,088 |
+| public\db                                                                      |          7 |        302 |          2 |         14 |        318 |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                       | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\Alex Francis\Desktop\myproject\app.js                                 | JavaScript |        748 |         66 |        118 |        932 |
+| c:\Users\Alex Francis\Desktop\myproject\package-lock.json                      | JSON       |     17,987 |          0 |          1 |     17,988 |
+| c:\Users\Alex Francis\Desktop\myproject\package.json                           | JSON       |         28 |          0 |          1 |         29 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\ArrowStroke.svg          | XML        |         15 |          1 |          1 |         17 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\LogoOutline.svg          | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\ScrollToButton.svg       | XML        |         14 |          1 |          1 |         16 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\Stickers\PsycleLogo.svg  | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\Stickers\logoOutline.svg | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\addrarrow.svg            | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\arrow.svg                | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\cancel.svg               | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\cart.svg                 | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\cust-slider-01.svg       | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\delivery.svg             | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\down.svg                 | XML        |          8 |          1 |          1 |         10 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\facebook.svg             | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\favicon.svg              | XML        |         45 |          1 |          1 |         47 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\gradient.svg             | XML        |          5 |          0 |          1 |          6 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\info.svg                 | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\insights.svg             | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\insta.svg                | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\logout.svg               | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\orders.svg               | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\pdfdwnldicn.svg          | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\success-lg.svg           | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\success-rg.svg           | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\twitter.svg              | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Assets\user.svg                 | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\about.js             | JavaScript |         73 |          2 |          7 |         82 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\admin.js             | JavaScript |        870 |         51 |        112 |      1,033 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\generalhome.js       | JavaScript |        260 |         12 |         29 |        301 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\generalpsyclelab.js  | JavaScript |        436 |         26 |         60 |        522 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\gsap.js              | JavaScript |         41 |          3 |         20 |         64 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\myaccount.js         | JavaScript |        663 |         31 |        107 |        801 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\psyclelab.js         | JavaScript |      1,486 |         20 |        190 |      1,696 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\scrooth.js           | JavaScript |         36 |          0 |          8 |         44 |
+| c:\Users\Alex Francis\Desktop\myproject\public\Javascript\threejs.js           | JavaScript |        440 |         27 |         78 |        545 |
+| c:\Users\Alex Francis\Desktop\myproject\public\aboutus.html                    | HTML       |        321 |          0 |         48 |        369 |
+| c:\Users\Alex Francis\Desktop\myproject\public\admin.html                      | HTML       |        245 |         44 |         28 |        317 |
+| c:\Users\Alex Francis\Desktop\myproject\public\adminlogin.html                 | HTML       |         87 |          0 |          9 |         96 |
+| c:\Users\Alex Francis\Desktop\myproject\public\css.css                         | CSS        |      2,042 |         53 |        313 |      2,408 |
+| c:\Users\Alex Francis\Desktop\myproject\public\db\addrschema.js                | JavaScript |         44 |          1 |          2 |         47 |
+| c:\Users\Alex Francis\Desktop\myproject\public\db\addtocartSchema.js           | JavaScript |         81 |          0 |          0 |         81 |
+| c:\Users\Alex Francis\Desktop\myproject\public\db\adminSchema.js               | JavaScript |         32 |          0 |          4 |         36 |
+| c:\Users\Alex Francis\Desktop\myproject\public\db\conn.js                      | JavaScript |         10 |          0 |          1 |         11 |
+| c:\Users\Alex Francis\Desktop\myproject\public\db\invoicesSchema.js            | JavaScript |         15 |          0 |          1 |         16 |
+| c:\Users\Alex Francis\Desktop\myproject\public\db\ordersSchema.js              | JavaScript |         91 |          0 |          0 |         91 |
+| c:\Users\Alex Francis\Desktop\myproject\public\db\userschema.js                | JavaScript |         29 |          1 |          6 |         36 |
+| c:\Users\Alex Francis\Desktop\myproject\public\index.html                      | HTML       |        315 |          3 |         28 |        346 |
+| c:\Users\Alex Francis\Desktop\myproject\public\myAccount.html                  | HTML       |        362 |         23 |         33 |        418 |
+| c:\Users\Alex Francis\Desktop\myproject\public\privacy.html                    | HTML       |        116 |          0 |         25 |        141 |
+| c:\Users\Alex Francis\Desktop\myproject\public\psyclelab.html                  | HTML       |        843 |          9 |         47 |        899 |
+| c:\Users\Alex Francis\Desktop\myproject\public\terms.html                      | HTML       |        126 |          0 |         30 |        156 |
+| Total                                                                          |            |     27,934 |        376 |      1,311 |     29,621 |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
